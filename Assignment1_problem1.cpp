@@ -1,3 +1,7 @@
+/***************************************
+        Problem 1: EMPLOYEE CLASS
+    @NGUYEN_TRAN_THANH_NGHIA-15ECE2
+****************************************/
 #include <iostream>
 #include<iomanip>
 using namespace std;
@@ -46,16 +50,17 @@ class Employee{
 };
 
 int main(){
-    Employee employees[3] ={
+    const int NUM_EMPLOYEE =3;
+    Employee employees[NUM_EMPLOYEE] ={
 		Employee("Susan Meyers", 47899, "Accounting", "Vice President"),
 		Employee("Mark Jones", 39119, "IT", "Programmer"),
 		Employee("Joy Rogers", 81774, "Manufacturing", "Engineer")};
-    cout <<"           NAME	  ID NUMBER     DEPARTMENT	POSITION\n";
-    for (int i = 0; i < 3; i++){
-        cout << setw(15) << employees[i].getName();
-        cout << setw(10)<< employees[i].getIdNumber();
-        cout << setw(15)<< employees[i].getDepartment();
-        cout << setw(18) << employees[i].getPosition() << endl;
+    cout <<"NAME	      ID NUMBER   DEPARTMENT	POSITION\n";
+    for (int i = 0; i < NUM_EMPLOYEE; i++){
+        cout << setw(10) << employees[i].getName();
+        cout << "\t" << employees[i].getIdNumber();
+        cout << "\t" <<setw(15)<< employees[i].getDepartment();
+        cout << "\t" << employees[i].getPosition() << endl;
     }
     return 0;
 }
