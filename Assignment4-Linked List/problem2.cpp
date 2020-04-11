@@ -1,3 +1,7 @@
+/***************************************************
+        Problem 2:MERGE,CONCATENATE & EQUAL
+    @NGUYEN_TRAN_THANH_NGHIA-15ECE2
+****************************************************/
 #include <iostream>
 /*STRUCT Node*/
 template<class T> struct Node{
