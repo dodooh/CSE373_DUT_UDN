@@ -1,6 +1,6 @@
 /***************************************************
         Problem 2:MERGE,CONCATENATE & EQUAL
-    @NGUYEN_TRAN_THANH_NGHIA-15ECE2
+    @author: NGUYEN_TRAN_THANH_NGHIA-15ECE2
 ****************************************************/
 #include <iostream>
 /*STRUCT Node*/
@@ -141,10 +141,9 @@ void NumberLinkedList<T>::printList(){
     Node<T>* current = first();
     while (current)
     {
-        std::cout << current->data << "->";
+        std::cout << current->data << " ";
         current = current->next;
     }
-    std::cout <<"NULL"<<std::endl;
 }
 template<class T>
 bool NumberLinkedList<T>::isEmpty(){
@@ -171,7 +170,6 @@ void NumberLinkedList<T>::makeEmpty(){
 
 int main()
 {
-    std::cout <<"---------INITIALIZE---------" << std::endl;
     NumberLinkedList<int> p1;
     Node<int>* temp = p1.zeroth();
     for (int i = 1 ; i <= 10; ++i)
@@ -202,7 +200,6 @@ int main()
     std::cout << "Printing the list p3: "<< std::endl;
     p3.printList();
     //EQUAL
-    std::cout <<"---------EQUAL-FUNCTION---------" << std::endl;
     if (p1.equal(p2))
         std::cout <<"p1 is equal p2" << std::endl;
     else
@@ -212,7 +209,6 @@ int main()
     else
         std::cout <<"p1 is not equal p3" << std::endl;
     //MERGE
-    std::cout <<"---------MERGE-FUNCTION---------" << std::endl;
     NumberLinkedList<int> p4;
     p4.merge(p1,p2);
     std::cout << "Printing the list p4:(merge p1 & p2) "<< std::endl;
@@ -224,7 +220,6 @@ int main()
     std::cout << "Printing the list p2: "<< std::endl;
     p2.printList();
     //CONCATENATE
-    std::cout <<"---------CONCATENATE-FUNCTION---------" << std::endl;
     NumberLinkedList<int> p5;
     p5.concatenate2Lists(p1,p2);
     std::cout << "Printing the list p5:(concatenate p1->p2) "<< std::endl;
