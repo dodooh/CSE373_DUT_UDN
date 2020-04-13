@@ -199,7 +199,7 @@ int main()
     std::cout << std::endl;
     std::cout << "Printing the list p3: "<< std::endl;
     p3.printList();
-    //EQUAL
+
     if (p1.equal(p2))
         std::cout <<"p1 is equal p2" << std::endl;
     else
@@ -208,25 +208,16 @@ int main()
         std::cout <<"p1 is equal p3" << std::endl;
     else
         std::cout <<"p1 is not equal p3" << std::endl;
-    //MERGE
+
     NumberLinkedList<int> p4;
     p4.merge(p1,p2);
     std::cout << "Printing the list p4:(merge p1 & p2) "<< std::endl;
     p4.printList();
-    std::cout << std::endl;
-    std::cout << "Printing the list p1: "<< std::endl;
-    p1.printList();
-    std::cout << std::endl;
-    std::cout << "Printing the list p2: "<< std::endl;
-    p2.printList();
-    //CONCATENATE
+
     NumberLinkedList<int> p5;
     p5.concatenate2Lists(p1,p2);
     std::cout << "Printing the list p5:(concatenate p1->p2) "<< std::endl;
     p5.printList();
-    p5.concatenate2Lists(p2,p1);
-    std::cout << std::endl;
-    std::cout << "Printing the list p5:(concatenate p2->p1) "<< std::endl;
-    p5.printList();
+
     return 0;
 }
