@@ -27,6 +27,7 @@ int main()
     for (int i = 0; i < TIME_TEST; ++i){
         give_random_array(arr);
         auto start = high_resolution_clock::now();
+	    //Uncomment to measure each sorting algorithm.
 //      insertionSort(arr);
 //      selectionSort(arr);
 //      bubleSort(arr);
