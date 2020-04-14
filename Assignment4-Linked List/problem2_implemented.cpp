@@ -11,14 +11,11 @@ struct ListNode{
         int item() const{
             return data;
         }
-        ListNode *&tail(){
+        Node& tail(){
             return next;
         }
 };
-
-typedef ListNode* Node;
 /*Class NUMBERLINKEDLIST*/
-const Node emptyList = NULL;
 
 class NumberLinkedList{
     private:
@@ -37,7 +34,7 @@ class NumberLinkedList{
             return dummyHead->tail();
         }
         bool isEmpty(){
-            return (first() == emptyList);
+            return (first() == NULL);
         };
         Node cons(int e = 0, Node p = NULL){
             return new ListNode(e,p);
