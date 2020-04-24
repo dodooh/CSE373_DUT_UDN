@@ -221,13 +221,9 @@ int main()
     MathStack<int> s;
     for (int i = 0; i < 6; i++)
         s.push(i);
-    // Stack is 0->1->2->3->4->5->6->7->8->9 with 9 is stackTop.
 
     MathStack<int> s2 = s; // test copy constructor (also tests assignment)
-    std::cout << "Print s2 " << std::endl;
     print(s2);
-    // ADD() class function will sum 8 & 9 to 17 and push to the stack so it becomes 0->1->2->3->4->5->6->7->17
-    std::cout << "Test add() : ";
     try{
         s2.add();
         int value;
@@ -239,7 +235,6 @@ int main()
         std::cout << e.what() << std::endl;
     }
     print(s2);
-    std::cout << "Test sub() : ";
     try{
         s2.sub();
         int value;
@@ -251,7 +246,6 @@ int main()
         std::cout << e.what() << std::endl;
     }
     print(s2);
-    std::cout << "Test mult() : ";
     try{
         s2.mult();
         int value;
@@ -263,7 +257,6 @@ int main()
         std::cout << e.what() << std::endl;
     }
     print(s2);
-    std::cout << "Test div() : ";
     try{
         s2.div();
         int value;
@@ -275,9 +268,8 @@ int main()
         std::cout << e.what() << std::endl;
     }
     print(s2);
-    //addAll()
+
     MathStack<int> s3 = s;
-    std::cout << "Print s3 " << std::endl;
     print(s3);
     try{
         s3.addAll();
@@ -286,11 +278,9 @@ int main()
     {
         std::cout << e.what() << std::endl;
     }
-    std::cout << "Test addAll() : ";
     print(s3);
-    //multAll
+
     MathStack<int> s4 = s;
-    std::cout << "Print s4 " << std::endl;
     print(s4);
     try{
         s4.multAll();
@@ -299,7 +289,6 @@ int main()
     {
         std::cout << e.what() << std::endl;
     }
-    std::cout << "Test multAll() : ";
     print(s4);
 
     return 0;
