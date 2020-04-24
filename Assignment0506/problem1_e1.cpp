@@ -310,7 +310,7 @@ void print(MathStack<T>& m)
     MathStack<T> temp = m;
     while (!temp.isEmpty())
     {
-        int value;
+        T value;
         temp.topAndPop(value);
         std::cout << value << "<-";
     }
