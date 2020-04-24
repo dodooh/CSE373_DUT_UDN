@@ -219,7 +219,7 @@ void print(MathStack<T>& );
 int main()
 {
     MathStack<int> s;
-    for (int i = 1; i < 10; i++)
+    for (int i = 0; i < 6; i++)
         s.push(i);
     // Stack is 0->1->2->3->4->5->6->7->8->9 with 9 is stackTop.
 
